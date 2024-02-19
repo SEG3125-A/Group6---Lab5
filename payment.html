@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Modern Barbershop</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="payment-card">
+            <h2 class="text-center">Payment Details</h2>
+            <form class="payment-form">
+                <!-- Ici, vous pouvez intégrer votre solution de paiement, par exemple Stripe, PayPal, etc. -->
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 1234 1234 1234" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder=" Put your name " required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="CVV" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="CVV" placeholder="Enter your code " required>
+                </div>
+
+
+                <!-- Autres champs de paiement comme la date d'expiration, CVV, etc. -->
+                <button type="submit" class="btn btn-primary">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

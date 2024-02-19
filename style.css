@@ -1,0 +1,484 @@
+
+/* ******************************home**********************************/
+
+.welcome-section {
+    background-color: rgba(255, 255, 255, 0.85); /* Blanc avec un peu de transparence */
+    padding: 40px;
+    margin: 20px auto; /* Centrage et marge autour de la section */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre douce pour de la profondeur */
+    border-radius: 10px; /* Coins arrondis */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Bordure subtile */
+    max-width: 800px; /* Largeur maximale pour le contrôle du layout */
+}
+
+.welcome-section h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Exemple de police */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre de texte pour améliorer la lisibilité */
+}
+
+.welcome-section p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Ombre de texte pour améliorer la lisibilité */
+}
+
+
+
+
+body {
+    background-image: url('https://www.salonsdirect.com/blog/wp-content/uploads/2019/01/nathon-oski-EW_rqoSdDes-unsplash-1536x1020.jpg'); /* Remplacez par le chemin réel de votre image */
+    background-size: cover; /* Couvre toute la zone disponible, sans répétition */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* L'image d'arrière-plan reste fixe lors du défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+
+/* ******************************navbar  **********************************/
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff !important; /* Couleur blanche pour le texte du logo */
+    margin-right: 30px; /* Espace entre le logo et le menu de navigation */
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto; /* Centrer les liens de la navbar */
+    display: flex;
+    justify-content: center; /* Nouveau style pour centrer */
+    width: 100%;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+}
+.navbar-collapse {
+    justify-content: space-between; /* Sépare le logo et les liens */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #ffd700; /* Or a color that matches your brand */
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Styles pour que la navbar reste horizontale sur les petits écrans */
+.navbar-expand .navbar-collapse {
+    flex-basis: auto;
+}
+.navbar-toggler {
+    border: none; /* Enlève la bordure du bouton toggler */
+}
+
+@media (min-width: 992px) { /* Point de rupture pour les grands écrans */
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 20px; /* Espace entre les éléments du menu */
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        flex-wrap: nowrap; /* Alignement des éléments du menu à droite */
+    }
+}
+
+/* Responsive menu toggle button */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* ******************************service **********************************/
+
+
+/* Conteneur général pour les services */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les éléments des services sur la page */
+    gap: 20px; /* Espacement entre les éléments des services */
+}
+
+/* Conteneur individuel pour chaque service */
+.service-item {
+    width: 300px; /* Ou la largeur souhaitée pour vos images */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Espace autour de chaque élément de service */
+    background: #fff; /* Fond blanc pour le texte */
+}
+
+/* Image de service */
+.service-item img {
+    width: 100%; /* Permet de s'assurer que l'image remplit la largeur du .service-item */
+    height: auto; /* Maintient le ratio de l'image */
+    display: block; /* Empêche les marges par défaut des images inline */
+}
+
+/* Informations sur le service */
+.service-info {
+    padding: 15px;
+    text-align: center; /* Centre le texte à l'intérieur du .service-item */
+}
+
+/* Titre du service */
+.service-item h3 {
+    margin: 10px 0; /* Espacement au-dessus et en dessous du titre */
+}
+
+/* Description du service */
+.service-item p {
+    margin: 5px 0; /* Espacement réduit pour les paragraphes */
+}
+
+/* Prix du service */
+.service-price {
+    color: #007bff; /* Couleur pour mettre en avant le prix */
+    font-weight: bold;
+    font-size: 1.2rem; /* Taille du texte du prix */
+}
+
+
+
+/* ******************************expert  **********************************/
+
+.experts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.expert-item {
+    width: calc(50% - 20px); /* Prend la moitié de l'espace disponible, en soustrayant l'espacement */
+    margin: 10px; /* Espace autour de chaque carte d'expert */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour le style */
+    border-radius: 8px; /* Bords arrondis de la carte */
+    overflow: hidden; /* Cache les débordements de contenu */
+    background: #fff; /* Fond blanc pour le contenu */
+    text-align: center; /* Centrer le texte dans la carte */
+    transition: transform 0.3s ease; /* Animation de transition pour l'effet de survol */
+}
+
+.expert-item:hover {
+    transform: translateY(-5px); /* Déplace légèrement la carte vers le haut lors du survol */
+}
+
+.expert-image {
+    max-width: 100%; /* L'image remplit la largeur de la carte */
+    height: auto; /* Garde le ratio de l'image */
+    border-top-left-radius: 8px; /* Arrondit les coins supérieurs de l'image */
+    border-top-right-radius: 8px;
+}
+
+.expert-info {
+    padding: 15px;
+}
+
+.expert-info h3 {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Taille de police pour le nom */
+}
+
+.expert-info p {
+    margin-bottom: 10px;
+    color: #666; /* Couleur du texte pour la description */
+}
+
+/* Pour les petits écrans, vous pouvez souhaiter que chaque carte prenne la pleine largeur */
+@media (max-width: 768px) {
+    .expert-item {
+        width: calc(100% - 20px);
+    }
+}
+
+
+
+/* ******************************booking **********************************/
+
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #333;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav li {
+    padding: 0 20px;
+}
+
+.navbar-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active {
+    color: #d5d5d5;
+}
+
+/* Container for the form */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Booking card styles */
+.appointment-card {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.appointment-card h2 {
+    color: #333333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Form styling */
+.appointment-form .form-control,
+.appointment-form .form-select {
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.appointment-form .form-label {
+    margin-bottom: .5rem;
+    display: block;
+    color: #333333;
+}
+
+.appointment-form button[type="submit"] {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.appointment-form button[type="submit"]:hover {
+    background-color: #003d82;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+
+
+
+
+/* ******************************payment **********************************/
+
+
+/* Style général */
+body, h2, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style global de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Style du conteneur principal */
+.container {
+    display: flex;
+    justify-content: center; /* Centre le contenu de la carte */
+    padding: 20px;
+}
+
+/* Style de la carte de paiement */
+.payment-card {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 40px auto; /* Pour centrer la carte dans la vue */
+    border-radius: 8px;
+    max-width: 500px; /* Ajustez selon la largeur désirée */
+}
+
+.payment-card h2 {
+    color: #333333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Style des champs du formulaire */
+.payment-form .form-control,
+.payment-form .form-select {
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.payment-form .form-label {
+    margin-bottom: .5rem;
+    display: block;
+    color: #333333;
+}
+
+.payment-form button[type="submit"] {
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.payment-form button[type="submit"]:hover {
+    background-color: #003d82;
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .payment-card {
+        width: 100%; /* Le formulaire de paiement prend toute la largeur sur les petits écrans */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styles généraux pour la page feedback, similaires aux autres pages */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feedback-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Styles pour les formulaires, cohérents à travers le site */
+.feedback-form .form-control, .feedback-form .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-form .form-label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+/* Bouton personnalisé cohérent avec les autres pages */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Bouton en pleine largeur */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+    .feedback-card {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
